@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} Update {% endblock title %}
+{% block body %}
+
+<h4 style="margin: 3vh;">Update DataBase</h4>
+<form action="/update/{{upda.sr_no}}" method="POST">
+  <div class="container">
+    <div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" name="title" value="{{ upda.title }}" placeholder="Title">
+      <label for="Title">Title</label>
+    </div>
+    <div class="form-floating">
+      <input type="text" class="form-control" name='desc' value="{{ upda.desc }}" placeholder="Discription">
+      <label for="desc">Discription</label>
+    </div>
+    <br />
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>
+
+{% endblock body %}
